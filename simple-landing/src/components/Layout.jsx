@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
-const pages = ['Главная', 'Куда сходить', 'Что посмотреть', 'Где поесть', 'Как добраться', 'Советы'];
+const pages = ['О себе', 'Портфолио', 'Отзывы', 'Контакты'];
 
 export default function Layout() {
 
@@ -24,7 +24,8 @@ export default function Layout() {
           left: 0,
           right: 0, 
           zIndex: (theme) => theme.zIndex.drawer + 1,
-          bgcolor: '#005a4c', // зелёный цвет
+          /*bgcolor: '#005a4c',*/
+          opacity: '100%',
         }}
       >
         <Toolbar sx={{ justifyContent: 'center'}}>          
