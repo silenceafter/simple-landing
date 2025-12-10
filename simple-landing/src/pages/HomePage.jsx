@@ -1,5 +1,75 @@
-//import React, { useState } from "react";
+import React, { useState } from "react";
+import { Outlet, Link } from 'react-router-dom';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import { Box, Grid, Avatar } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+
+const pages = ['О себе', 'Портфолио', 'Отзывы', 'Контакты'];
 
 export default function HomePage() {
-    return '132';
+    return (
+    <>
+      <AppBar
+        position="fixed"
+        sx={{
+          top: 0,
+          left: 0,
+          right: 0, 
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          /*bgcolor: '#005a4c',*/
+          boxShadow: 'none',
+          backgroundColor: 'transparent',
+          '& .MuiTypography-root': {
+            color: 'black !important',
+          },
+          '& .MuiButton-root': {
+            color: 'black !important',
+          },
+          '& .MuiIconButton-root': {
+            color: 'black !important',
+          },
+        }}
+      >
+        <Toolbar sx={{ justifyContent: 'center', fontFamily: "Montserrat", fontWeight: 200}}>          
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+            {pages.map((page) => (
+              <Typography
+                key={page}
+                variant="body1"
+                sx={{
+                  color: 'white',
+                  cursor: 'pointer',
+                  '&:hover': { opacity: 0.8 },
+                }}
+                onClick={() => console.log(`Go to ${page}`)}
+              >
+                {page}
+              </Typography>
+            ))}
+        </Box>
+        </Toolbar>
+      </AppBar>
+
+      <Box
+        sx={{
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundImage: `url('/images/hero-bg.jpg')`, // Путь к изображению
+          backgroundSize: 'cover', // Растягиваем, чтобы покрыть весь Box
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          color: 'white',
+          textAlign: 'center',
+        }}
+      ></Box>
+    </>
+  );
 }

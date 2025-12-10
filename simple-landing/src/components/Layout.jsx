@@ -25,10 +25,19 @@ export default function Layout() {
           right: 0, 
           zIndex: (theme) => theme.zIndex.drawer + 1,
           /*bgcolor: '#005a4c',*/
-          opacity: '100%',
+          backgroundColor: 'transparent',
+          '& .MuiTypography-root': {
+            color: 'black !important',
+          },
+          '& .MuiButton-root': {
+            color: 'black !important',
+          },
+          '& .MuiIconButton-root': {
+            color: 'black !important',
+          },
         }}
       >
-        <Toolbar sx={{ justifyContent: 'center'}}>          
+        <Toolbar sx={{ justifyContent: 'center', fontFamily: "Montserrat", fontWeight: 200}}>          
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
             {pages.map((page) => (
               <Typography

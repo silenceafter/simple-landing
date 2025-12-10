@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+        <Route path="/" element={<HomePage />}>
+          {/*<Route index element={<HomePage />} />*/}
           <Route path="*" element={<div>404 — Страница не найдена</div>} />
         </Route>
       </Routes>
