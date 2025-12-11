@@ -45,7 +45,7 @@ export default function HomePage() {
               fontFamily: "Montserrat", 
               fontWeight: 200,
               backgroundColor: 'transparent',
-                    backgroundImage: 'none'
+              backgroundImage: 'none'
             }}
           >
             {/* Логотип слева */}
@@ -117,36 +117,62 @@ export default function HomePage() {
             alignItems: 'center',
             color: 'white',
             textAlign: 'center',
-            px: 2
+            /*px: 2*/
+          }}
+        >
+            <Box
+          sx={{
+            /*height: '100vh',*/
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white',
+            textAlign: 'center',
+            width: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+            backdropFilter: 'blur(3px)',
+            paddingTop: '12px',
+            paddingBottom: '12px',
           }}
         >
           <Typography 
             variant="h1" 
             sx={{ 
               mb: 3, 
-              /*fontWeight: 'bold',*/
               '& span': {
                 display: 'block'
-              }
+              },
             }}
           >
             Ваш идеальный интерьер <span>начинается здесь</span>
           </Typography>
-          <Typography variant="h5" sx={{ mb: 5, maxWidth: '800px' }}>
+          <Typography 
+            variant="h6"
+            sx={{ 
+              mb: 5, 
+              fontWeight: (theme) => theme.typography.medium.fontWeight,
+              '& span': {
+                display: 'block'
+              },
+            }}
+          >
             Пространство, отражающее индивидуальность, комфорт и стиль жизни
           </Typography>
           <Button 
-            variant="contained" 
-            size="large"
-            sx={{ 
-              backgroundColor: 'primary.main',
-              fontSize: '1.1rem',
-              px: 4,
-              py: 1.5
+            variant="contained"
+            sx={{
+              fontWeight: (theme) => theme.typography.medium.fontWeight,
+              backgroundColor: 'rgb(209,167,57)',
+    // Задаём цвет текста (если он не контрастный, можно изменить)
+    color: 'white', // или 'black', в зависимости от фона
+    // Опционально: стиль при наведении
+    '&:hover': {
+      backgroundColor: 'rgb(130, 84, 30)', }
             }}
-          >
-            Начать
-          </Button>
+          >Узнать больше</Button>
+          </Box>
         </Box>
       </Box>
     </>
