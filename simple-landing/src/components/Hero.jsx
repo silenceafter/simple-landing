@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <Box
       sx={{
