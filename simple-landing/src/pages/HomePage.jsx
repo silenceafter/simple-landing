@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Portfolio from "../components/Portfolio";
 
 const pages = ['О себе', 'Портфолио', 'Отзывы', 'Контакты'];
 
@@ -47,29 +48,20 @@ export default function HomePage() {
               fontFamily: "Montserrat", 
               fontWeight: 200,
               backgroundColor: 'transparent',
-              backgroundImage: 'none'
+              backgroundImage: 'none',
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             {/* Логотип слева */}
-            {/*<Typography
-              variant="h6"
-              sx={{
-                color: 'white',
-                fontWeight: 'bold',
-                cursor: 'pointer'
-              }}
-            >
-              Логотип
-            </Typography>*/}
+            <Box sx={{ flex: 1 }} />
 
             {/* Навигация по центру */}
             <Box 
               sx={{ 
                 display: { xs: 'none', md: 'flex' }, 
                 gap: 4,
-                position: 'absolute',
-                left: '50%',
-                transform: 'translateX(-50%)'
+                justifyContent: 'center',
               }}
             >
               {pages.map((page) => (
@@ -94,31 +86,18 @@ export default function HomePage() {
           </Box>
 
           {/* Кнопка справа */}
-          {/*<Button 
-            variant="contained" 
-            sx={{ 
-              backgroundColor: 'white',
-              color: 'black',
-              '&:hover': {
-                backgroundColor: '#f5f5f5'
-              }
-            }}
-          >
-            Связаться
-          </Button>*/}
+          <Box sx={{ flex: 1, textAlign: 'right' }} />
           </Toolbar>
         </AppBar>
 
         {/* Hero */}
-        <Hero />      
-        {/* About */}
-        <About />
-
-        {/* Portfolio */}
-        
+        <Hero />
       </Box>
 
-      
+      {/* About */}
+      <About />
+      {/* Portfolio */}
+      <Portfolio />
     </>
   );
 }
