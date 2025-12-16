@@ -44,6 +44,7 @@ export default function Portfolio() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            pb:4
           }}
         >
           <Box
@@ -51,11 +52,11 @@ export default function Portfolio() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              gap: { xs: 4, md: 8 },
+              gap: { xs: 4, md: 8 },              
             }}
           >
             {/* Заголовок */}
-            <Typography variant="h1" sx={{ mb: 3, textAlign: 'left' }}>
+            <Typography variant="h2" sx={{ mt: 2, textAlign: 'left' }}>
               Портфолио
             </Typography>
             

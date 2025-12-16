@@ -71,7 +71,7 @@ export default function About() {
               }}
             >
               <Box sx={{ mb: 3 }}>
-                <Typography variant="h1" sx={{ mb: 3, textAlign: 'left' }}>
+                <Typography variant="h2" sx={{ mb: 3, textAlign: 'left' }}>
                   О себе
                 </Typography>
                 <Typography variant="h6" sx={{ mb: 3 }} noWrap>

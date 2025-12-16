@@ -12,6 +12,7 @@ import Menu from '@mui/material/Menu';
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Portfolio from "../components/Portfolio";
+import Process from "../components/Process";
 
 const pages = ['О себе', 'Портфолио', 'Отзывы', 'Контакты'];
 
@@ -98,6 +99,8 @@ export default function HomePage() {
       <About />
       {/* Portfolio */}
       <Portfolio />
+      {/* Process */}
+      <Process />
     </>
   );
 }
