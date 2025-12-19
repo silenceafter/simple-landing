@@ -27,21 +27,30 @@ export default function Process() {
               flexDirection: 'column',
               alignItems: 'center',
               gap: { xs: 2, md: 4 },
-              pt: 4,
-              pb: 2,
+              pt: 12,
+              mt: 0,
+              pb: 12,
             }}
           >
             {/* Заголовок */}
-            <Typography variant="h2" sx={{ mt: 2, textAlign: 'center' }}>
+            <Typography variant="h2" sx={{ mt: 0, mb: 6, textAlign: 'left' }}>
               Как мы работаем
             </Typography>
             
             {/* Степпер */}
-            <Box sx={{ maxWidth: 800, mx: 'auto' }}>
+            <Box 
+              sx={{ 
+                maxWidth: 800, 
+                mx: 'auto',
+                p: 4,
+                borderRadius: 2,
+                border: '1px solid #e0e0e0',
+              }}
+            >
               <Stepper orientation="vertical">
                 {/* 1 */}
                 <Step active={true} completed={true}>
-                  <StepLabel 
+                  <StepLabel
                     icon={
                       <Box
                         sx={{
@@ -64,7 +73,18 @@ export default function Process() {
                       <Typography variant="h6" component="h3">
                         Знакомство и консультация
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography 
+                        variant="body2" 
+                        color="text.secondary"
+                        sx={{
+                          borderRadius: 1,
+                          border: '1px solid #e0e0e0',
+                          bgcolor: 'grey.200',
+                          p: 1.5,
+                          mt: 0.5,
+                          color: 'text.secondary',
+                        }}  
+                      >
                         Обсуждаем пожелания, бюджет, сроки и стиль. Задаём вопросы, чтобы понять вашу мечту
                       </Typography>
                     </Box>
@@ -233,6 +253,16 @@ export default function Process() {
               </Stepper>
             </Box>            
           </Box>
+
+          {/* p: 3,
+    borderRadius: 2,
+    border: '1px solid #e0e0e0',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+      transform: 'translateY(-4px)', // ← поднятие при наведении
+      borderColor: 'primary.main', // ← акцент на цвете
+    }, */}
         </Container>
       </Box>
     </>
