@@ -1,14 +1,23 @@
 import React from 'react';
-import { Box, Button, Card, CardMedia, CardContent, Container, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Card,
+  CardMedia,
+  CardContent,
+  Container,
+  Stack,
+  Typography,
+} from '@mui/material';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 
 export default function About() {
   return (
     <>
-      { /* About */}
-      <Box sx={{ bgcolor: '#FAF7F2'}}>
-        <Container 
-          sx={{        
+      {/* About */}
+      <Box sx={{ bgcolor: '#FAF7F2' }}>
+        <Container
+          sx={{
             minHeight: '100vh',
             width: '100%',
             display: 'flex',
@@ -28,12 +37,12 @@ export default function About() {
             {/* Картинка - левая часть */}
             <Box
               sx={{
-                width: { xs: '100%', md: '45%' }, 
-                flexShrink: 0,              
+                width: { xs: '100%', md: '45%' },
+                flexShrink: 0,
               }}
-            >            
+            >
               <Card
-                sx={{ 
+                sx={{
                   maxWidth: 400,
                   borderRadius: 4,
                   overflow: 'hidden',
@@ -42,7 +51,7 @@ export default function About() {
               >
                 <CardMedia
                   component="img"
-                  height="auto"                
+                  height="auto"
                   image="/images/about-bg.jpg"
                   alt="Дизайнер"
                   sx={{
@@ -50,7 +59,7 @@ export default function About() {
                     '&:hover': {
                       transform: 'scale(1.03)',
                       transition: 'transform 0.5s ease',
-                    }
+                    },
                   }}
                 />
                 <CardContent sx={{ p: 3 }}>
@@ -60,10 +69,10 @@ export default function About() {
                 </CardContent>
               </Card>
             </Box>
-            
+
             {/* Текст - правая часть */}
-            <Box 
-              sx={{ 
+            <Box
+              sx={{
                 width: { xs: '100%', md: '100%' },
                 display: 'flex',
                 flexDirection: 'column',
@@ -78,21 +87,28 @@ export default function About() {
                   Создайте пространство, которое вдохновляет!
                 </Typography>
                 <Typography paragraph sx={{ textAlign: 'justify' }}>
-                  Меня зовут Анна Асеева, и я более 5 лет занимаюсь дизайном интерьеров. 
+                  Меня зовут Анна Асеева, и я более 5 лет занимаюсь дизайном
+                  интерьеров.
                 </Typography>
                 <Typography paragraph sx={{ textAlign: 'justify' }}>
-                  Моя страсть к дизайну началась с детства, когда я заметила, как пространство может влиять на наше настроение и самочувствие. 
-                  С тех пор я посвятила себя созданию интерьеров, которые не только красивы, но и функциональны, отражая индивидуальность каждого клиента.            
+                  Моя страсть к дизайну началась с детства, когда я заметила,
+                  как пространство может влиять на наше настроение и
+                  самочувствие. С тех пор я посвятила себя созданию интерьеров,
+                  которые не только красивы, но и функциональны, отражая
+                  индивидуальность каждого клиента.
                 </Typography>
                 <Typography paragraph sx={{ textAlign: 'justify' }}>
-                  За годы работы реализовано множество проектов, от небольших квартир до крупных коммерческих объектов.
-                  Каждый элемент интерьера продуман до мелочей, чтобы обеспечить максимальный комфорт и удобство.
+                  За годы работы реализовано множество проектов, от небольших
+                  квартир до крупных коммерческих объектов. Каждый элемент
+                  интерьера продуман до мелочей, чтобы обеспечить максимальный
+                  комфорт и удобство.
                 </Typography>
                 <Typography paragraph sx={{ textAlign: 'justify' }}>
-                  Что важно для меня? Искать новые решения и вдохновляться современными тенденциями, чтобы создать что-то особенное.
+                  Что важно для меня? Искать новые решения и вдохновляться
+                  современными тенденциями, чтобы создать что-то особенное.
                 </Typography>
               </Box>
-              <Stack direction="row" spacing={2} ali>
+              <Stack direction="row" spacing={2}>
                 <Button variant="contained" endIcon={<TrendingFlatIcon />}>
                   Мои работы
                 </Button>
